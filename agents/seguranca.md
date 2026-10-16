@@ -105,6 +105,17 @@ Itens identificados na implementação inicial (15/10/2026):
 - **SRI nos recursos de CDN** — Alpine.js é carregado de `cdn.jsdelivr.net` sem `integrity`; fixar versão + hash quando o projeto entrar em produção.
 - **Privilégio mínimo no banco** — usuário MySQL do `.env` deve ter apenas os privilégios necessários (SELECT/INSERT em `contatos`), sem uso de root.
 
+### Auditoria de segurança — 16/10/2026
+
+Revisão completa do código + 10 testes contra o servidor local. **Nenhuma vulnerabilidade explorável encontrada.**
+
+Verificado por teste real: método não permitido bloqueado (405); injeção de array em campo (`nome[]`) rejeitada (422); limites de tamanho aplicados (422); payload XSS não refletido na resposta; payload de SQL Injection sem vazamento de detalhes de SQL; erros internos nunca expostos (mensagem genérica + log interno); honeypot ativo; páginas sem warnings/erros PHP expostos; `.env` e logs fora do controle de versão (git).
+
+Novos itens de melhoria (somam-se aos acima):
+
+- **CSP (Content-Security-Policy)** — avaliar em produção; requer ajustes para o Alpine.js (expressões e estilos inline de `x-show`/`x-transition`).
+- **APP_ENV em produção** — garantir `APP_ENV="producao"` no `.env` do servidor para desativar a exibição de erros (padrão do código: `local`).
+
 ---
 
 # Revisão Obrigatória
