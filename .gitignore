@@ -1,0 +1,15 @@
+# Ambiente e credenciais (nunca versionar)
+.env
+
+# Logs da aplicação
+storage/logs/*.log
+
+# Arquivos de sistema operacional
+Thumbs.db
+Desktop.ini
+.DS_Store
+
+# Editores / IDEs
+.vscode/
+.idea/
+*.swp
