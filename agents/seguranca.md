@@ -97,13 +97,11 @@ Proteger contra acesso público a:
 
 Itens levantados em auditoria de segurança e que devem ser verificados/implementados conforme o projeto evolui:
 
-_(Nenhuma pendência registrada. Adicionar aqui itens encontrados em auditorias, com referência ao arquivo/código e o que deve ser feito — ex.: rate limiting no login, validação completa de entrada no backend, autorização em todos os endpoints, privilégio mínimo no banco, upload de arquivos, SRI em recursos de CDN.)_
-
 Itens identificados na implementação inicial (15/10/2026):
 
 - **Rate limiting no formulário de contato** — `api/contato.php` hoje conta apenas com honeypot; avaliar limite por IP/intervalo quando houver tráfego real.
 - **SRI nos recursos de CDN** — Alpine.js é carregado de `cdn.jsdelivr.net` sem `integrity`; fixar versão + hash quando o projeto entrar em produção.
-- **Privilégio mínimo no banco** — usuário MySQL do `.env` deve ter apenas os privilégios necessários (SELECT/INSERT em `contatos`), sem uso de root.
+- **Privilégio mínimo no banco** — ✅ aplicado localmente (17/10/2026): usuário `kelia_site` com apenas SELECT/INSERT em `contatos` (INSERT usado pelo formulário; DELETE testado e negado). Repetir o mesmo procedimento em produção.
 
 ### Auditoria de segurança — 16/10/2026
 
