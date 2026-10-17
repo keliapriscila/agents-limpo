@@ -1,5 +1,6 @@
 # Progresso
 
+- 17/10/26: Alinhamento da página inicial verificado e corrigido; menu mobile consertado (tela cheia, sem rolagem lateral).
 - 17/10/26: Root do MySQL com senha forte e banco restrito a 127.0.0.1; senha guardada em arquivo local.
 - 17/10/26: Banco kelia_priscila criado e ligado ao formulário (usuário restrito; envio testado e validado).
 - 16/10/26: Auditoria de segurança executada (10 testes: injeção, XSS, validação, erros); sem vulnerabilidades.

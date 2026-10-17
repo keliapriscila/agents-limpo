@@ -58,6 +58,7 @@
 html {
     -webkit-text-size-adjust: 100%;
     scroll-behavior: smooth;
+    overflow-x: clip;
 }
 
 body {
@@ -394,9 +395,10 @@ h4 {
     position: fixed;
     top: 0;
     right: 0;
-    bottom: 0;
     z-index: 70;
     width: min(320px, 85vw);
+    height: 100vh;
+    height: 100dvh;
     display: flex;
     flex-direction: column;
     gap: 4px;
@@ -405,12 +407,16 @@ h4 {
     border-left: 1px solid var(--border-color);
     box-shadow: var(--shadow-lg);
     overflow-y: auto;
-    transform: translateX(105%);
-    transition: transform 0.25s ease;
+    visibility: hidden;
+    clip-path: inset(0 0 0 100%);
+    opacity: 0;
+    transition: clip-path 0.25s ease, opacity 0.2s ease, visibility 0.25s ease;
 }
 
 .site-nav.is-open {
-    transform: translateX(0);
+    visibility: visible;
+    clip-path: inset(-48px);
+    opacity: 1;
 }
 
 .nav-link {
@@ -442,8 +448,12 @@ h4 {
 
 .site-nav-overlay {
     position: fixed;
-    inset: 0;
+    top: 0;
+    left: 0;
     z-index: 65;
+    width: 100%;
+    height: 100vh;
+    height: 100dvh;
     background: rgba(17, 24, 39, 0.45);
     opacity: 0;
     pointer-events: none;
@@ -486,6 +496,7 @@ body.nav-aberto {
     .site-nav {
         position: static;
         width: auto;
+        height: auto;
         flex-direction: row;
         align-items: center;
         gap: 2px;
@@ -494,8 +505,10 @@ body.nav-aberto {
         border: 0;
         box-shadow: none;
         overflow: visible;
-        transform: none;
         transition: none;
+        visibility: visible;
+        opacity: 1;
+        clip-path: none;
     }
 
     .site-nav .nav-cta {
@@ -613,6 +626,8 @@ body.nav-aberto {
 /* ---------- Cards ---------- */
 
 .card {
+    display: flex;
+    flex-direction: column;
     background: var(--bg-card);
     border: 1px solid var(--border-color);
     border-radius: var(--radius-lg);
@@ -620,6 +635,9 @@ body.nav-aberto {
 }
 
 .card-body {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
     padding: 22px;
 }
 
@@ -660,7 +678,9 @@ body.nav-aberto {
     display: inline-flex;
     align-items: center;
     gap: 6px;
-    margin-top: 14px;
+    margin-top: auto;
+    padding-top: 14px;
+    align-self: flex-start;
     font-size: 13px;
     font-weight: 600;
     color: var(--color-brand);
