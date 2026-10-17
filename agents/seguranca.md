@@ -10,6 +10,7 @@ Toda implementação deve seguir estas diretrizes e passar pela revisão de segu
 - Nunca concatenar dados do usuário em consultas.
 - Validar e sanitizar todos os dados antes de utilizá-los.
 - Utilizar o menor nível de privilégio possível para o acesso ao banco.
+- Manter o root com senha forte e o MySQL escutando apenas em `127.0.0.1`; a aplicação nunca deve usar o root.
 
 ---
 
