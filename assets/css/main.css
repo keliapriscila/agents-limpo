@@ -1174,17 +1174,23 @@ body.nav-aberto {
 }
 
 .projeto-body {
-    display: grid;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
     gap: 10px;
     padding: 20px;
-    align-content: start;
+}
+
+.projeto-body > .badge {
+    align-self: flex-start;
 }
 
 .projeto-body .tags {
     display: flex;
     flex-wrap: wrap;
     gap: 6px;
-    margin-top: 4px;
+    margin-top: auto;
+    padding-top: 4px;
 }
 
 /* ---------- Tabs (Alpine.js) ---------- */
