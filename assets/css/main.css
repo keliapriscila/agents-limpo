@@ -204,9 +204,19 @@ h4 {
     margin-top: 6px;
 }
 
-.faixa {
+/* Faixa contida na coluna de conteúdo (painel arredondado) */
+.faixa-contida {
+    padding: 24px;
     background: var(--bg-card);
-    border-block: 1px solid var(--border-color);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm);
+}
+
+@media (min-width: 768px) {
+    .faixa-contida {
+        padding: 36px;
+    }
 }
 
 .grid-cards {

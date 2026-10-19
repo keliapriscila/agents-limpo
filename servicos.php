@@ -110,20 +110,23 @@ require __DIR__ . '/includes/layout/header.php';
     </div>
 </section>
 
-<section class="section faixa">
+<section class="section">
     <div class="container">
-        <div class="section-header">
-            <h2>Tecnologias que utilizo</h2>
-            <p class="page-sub">Stack moderna, sem excesso de dependências — priorizando velocidade, segurança e manutenibilidade.</p>
-        </div>
-        <div class="tecnologias">
-            <span class="badge badge-outline">HTML5</span>
-            <span class="badge badge-outline">CSS3</span>
-            <span class="badge badge-outline">JavaScript</span>
-            <span class="badge badge-outline">Alpine.js</span>
-            <span class="badge badge-outline">PHP 8</span>
-            <span class="badge badge-outline">MySQL</span>
-            <span class="badge badge-outline">UI/UX</span>
+        <div class="faixa-contida">
+            <div class="section-header">
+                <h2>Tecnologias que utilizo</h2>
+                <p class="page-sub">Stack moderna, sem excesso de dependências — priorizando velocidade, segurança e manutenibilidade.</p>
+            </div>
+
+            <div class="tecnologias">
+                <span class="badge badge-outline">HTML5</span>
+                <span class="badge badge-outline">CSS3</span>
+                <span class="badge badge-outline">JavaScript</span>
+                <span class="badge badge-outline">Alpine.js</span>
+                <span class="badge badge-outline">PHP 8</span>
+                <span class="badge badge-outline">MySQL</span>
+                <span class="badge badge-outline">UI/UX</span>
+            </div>
         </div>
     </div>
 </section>

@@ -102,35 +102,37 @@ require __DIR__ . '/includes/layout/header.php';
     </div>
 </section>
 
-<section class="section faixa">
+<section class="section">
     <div class="container">
-        <div class="section-header">
-            <h2>Como funciona</h2>
-            <p class="page-sub">Um processo simples e transparente, do primeiro contato à entrega.</p>
-        </div>
+        <div class="faixa-contida">
+            <div class="section-header">
+                <h2>Como funciona</h2>
+                <p class="page-sub">Um processo simples e transparente, do primeiro contato à entrega.</p>
+            </div>
 
-        <ol class="processo">
-            <li class="passo">
-                <span class="passo-numero">01</span>
-                <h3>Briefing</h3>
-                <p>Conversamos sobre o objetivo, o público e o que o projeto precisa resolver.</p>
-            </li>
-            <li class="passo">
-                <span class="passo-numero">02</span>
-                <h3>Design</h3>
-                <p>Defino a interface com foco em clareza, usabilidade e identidade visual.</p>
-            </li>
-            <li class="passo">
-                <span class="passo-numero">03</span>
-                <h3>Desenvolvimento</h3>
-                <p>Implemento com código limpo, seguro e otimizado para carregar rápido.</p>
-            </li>
-            <li class="passo">
-                <span class="passo-numero">04</span>
-                <h3>Entrega e suporte</h3>
-                <p>Publico o projeto e permaneço disponível para evoluções e manutenção.</p>
-            </li>
-        </ol>
+            <ol class="processo">
+                <li class="passo">
+                    <span class="passo-numero">01</span>
+                    <h3>Briefing</h3>
+                    <p>Conversamos sobre o objetivo, o público e o que o projeto precisa resolver.</p>
+                </li>
+                <li class="passo">
+                    <span class="passo-numero">02</span>
+                    <h3>Design</h3>
+                    <p>Defino a interface com foco em clareza, usabilidade e identidade visual.</p>
+                </li>
+                <li class="passo">
+                    <span class="passo-numero">03</span>
+                    <h3>Desenvolvimento</h3>
+                    <p>Implemento com código limpo, seguro e otimizado para carregar rápido.</p>
+                </li>
+                <li class="passo">
+                    <span class="passo-numero">04</span>
+                    <h3>Entrega e suporte</h3>
+                    <p>Publico o projeto e permaneço disponível para evoluções e manutenção.</p>
+                </li>
+            </ol>
+        </div>
     </div>
 </section>
 
